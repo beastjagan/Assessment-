@@ -5,7 +5,7 @@ db = Database()
 class Pokemon(db.Entity):
     _table_ = 'pokemon'
     id = PrimaryKey(int)
-    name = Required(str)
+    name = Required(str,unique=True)
     type = Required(str)
     hp = Required(int)
 
